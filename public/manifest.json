@@ -1,0 +1,17 @@
+{
+	"name": "Life in the UK Quiz 2026",
+	"short_name": "LifeInUK",
+	"description": "AI-powered Life in the UK test preparation for 2026",
+	"start_url": "/lifeintheuk",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#FFBF00",
+	"icons": [
+		{
+			"src": "https://cdn-icons-png.flaticon.com/512/197/197374.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}
