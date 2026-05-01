@@ -6,6 +6,7 @@ import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import InfoIcon from '@mui/icons-material/Info';
 import { QuizQuestion } from '../types';
 
+/* --------- Interfaces --------- */
 interface QuizCardProps {
 	question: QuizQuestion;
 	onAnswer: (selectedOption: number) => void;
@@ -15,18 +16,22 @@ interface QuizCardProps {
 	onFocusOption: (index: number) => void;
 }
 
+/* --------- Component --------- */
 export function QuizCard({ question, onAnswer, showExplanation, selectedOption, focusedOption, onFocusOption }: QuizCardProps) {
 	const theme = useTheme();
 	const [showHint, setShowHint] = useState(false);
 
+	/* --------- Handlers --------- */
 	const handleOptionClick = (index: number) => {
 		if (selectedOption !== null) return;
 		onAnswer(index);
 	};
 
+	/* --------- Render --------- */
 	return (
 		<Paper elevation={0} sx={{ p: { xs: 2.5, md: 4 }, bgcolor: '#121212', border: '1px solid #333' }}>
 			<Stack spacing={4}>
+				{/* Header Section */}
 				<Box display="flex" justifyContent="space-between" alignItems="flex-start" gap={2}>
 					<Typography variant="h6" color="primary" sx={{ lineHeight: 1.5, fontWeight: 700 }}>
 						{question.question}
@@ -51,6 +56,7 @@ export function QuizCard({ question, onAnswer, showExplanation, selectedOption, 
 					</Alert>
 				</Collapse>
 
+				{/* Options Section */}
 				<Stack spacing={2}>
 					{question.options.map((option, index) => {
 						let color: 'inherit' | 'primary' | 'success' | 'error' = 'inherit';
@@ -109,6 +115,7 @@ export function QuizCard({ question, onAnswer, showExplanation, selectedOption, 
 					})}
 				</Stack>
 
+				{/* Explanation Section */}
 				<Collapse in={showExplanation}>
 					<Box sx={{ p: 3, bgcolor: 'rgba(255, 191, 0, 0.05)', borderLeft: `4px solid ${theme.palette.primary.main}` }}>
 						<Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 1.5 }}>

@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
 	const prompt = `
    Act as an expert tutor for the "Life in the United Kingdom" official test. 
-   Generate 50 unique, factually valid questions for the year 2026.
+   Generate 10 unique, factually valid questions for the year 2026.
    
    Constraints:
    - Factual Context: Ensure accuracy for 2026 (including King Charles III as monarch and current UK laws/post-Brexit status).
