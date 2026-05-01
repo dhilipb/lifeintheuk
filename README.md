@@ -2,7 +2,7 @@
 
 An AI-powered preparation tool for the "Life in the United Kingdom" official test, specifically designed for 2026. This application leverages the Google Gemini API to dynamically generate high-quality, factually accurate practice questions.
 
-![App Screenshot](./docs/app.png)
+<img src="./docs/app.png" alt="App Screenshot" width="300" />
 
 ## 🚀 Features
 
